@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-100 text-charcoal-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-amber-warm text-white px-6 py-3 rounded-lg font-medium 
+           hover:bg-amber-deep transition-colors duration-200 
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-cream-300 text-charcoal-800 px-6 py-3 rounded-lg font-medium 
+           hover:bg-cream-400 transition-colors duration-200 border border-cream-500;
+  }
+
+  .btn-outline {
+    @apply border-2 border-amber-warm text-amber-warm px-6 py-3 rounded-lg font-medium 
+           hover:bg-amber-warm hover:text-white transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-cream-400 bg-white 
+           text-charcoal-900 placeholder:text-charcoal-700/50 
+           focus:outline-none focus:ring-2 focus:ring-amber-warm/50 focus:border-amber-warm
+           transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-cream-200 overflow-hidden;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-pending {
+    @apply badge bg-amber-light text-charcoal-800;
+  }
+
+  .badge-verified {
+    @apply badge bg-green-100 text-green-800;
+  }
+
+  .badge-shipped {
+    @apply badge bg-blue-100 text-blue-800;
+  }
+
+  .badge-cancelled {
+    @apply badge bg-red-100 text-red-800;
+  }
+}
